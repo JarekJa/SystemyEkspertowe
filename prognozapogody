@@ -70,7 +70,7 @@ class PrognozaPogody:
                 else:
                     return False
             else:
-                if self.temperatura[self.ilosc_dni - 1] - self.temperatura[self.ilosc_dni] > 0 and self.cisnienie[self.ilosc_dni - 1] - self.cisnienie[self.ilosc_dni] > 0:
+                if self.temperatura[self.ilosc_dni - 1] - self.temperatura[self.ilosc_dni] < 0 and self.cisnienie[self.ilosc_dni - 1] - self.cisnienie[self.ilosc_dni] < 0:
                     ran = random.randint(0, 100)
                     if ran < 100 * ((self.temperatura[self.ilosc_dni] + 10) / 20):
                         return True
